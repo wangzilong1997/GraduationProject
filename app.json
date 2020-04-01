@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/product/product"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cdcdcd",
+    "navigationBarTitleText": "make an order",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

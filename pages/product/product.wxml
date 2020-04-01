@@ -1,0 +1,18 @@
+<import src="product-item/product-item.wxml" />
+<view class="product">
+  <view class="product-banner">
+    <view class="product-seller">
+        <text>老字号安徽板面</text>
+        <view class="product-sell-desc">
+          <text>4.4</text>
+          <text>配送约30分钟</text>
+        </view>
+    </view>
+  </view>
+    <view class="product-container" wx:for="{{data}}" wx:for-item="dataItem">
+      <template is="product-item-template" data="{{...dataItem}}"></template>
+    </view>
+  
+  <view>
+  </view>
+</view>

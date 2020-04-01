@@ -1,0 +1,3 @@
+<template name="product-food-template">
+  <view>{{name}}</view>
+</template>
