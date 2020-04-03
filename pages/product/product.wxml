@@ -2,16 +2,40 @@
 <view class="product">
   <view class="product-banner">
     <view class="product-seller">
-        <text>老字号安徽板面</text>
-        <view class="product-sell-desc">
-          <text>4.4</text>
-          <text>配送约30分钟</text>
+        <view class="seller-info">
+          <view class="seller-info-img">
+            <image src="../../images/seller.png"></image>
+          </view>
+          <view class="seller-info-top">
+          
+            <text>老字号安徽板面</text>
+            <view class="product-sell-desc">
+              <image src="../../images/bulb.png" class="seller-icon">
+              </image>
+              <text>4.4</text>
+              <image src="../../images/reloadtime.png" class="seller-icon">
+              </image>
+              <text>配送约30分钟</text>
+            </view>
+          </view>
+          
+        </view>
+        <view class="seller-desc">
+          <view class="seller-desc-items">
+            <view class="seller-desc-item">
+                首单减12
+              </view>
+          </view>
         </view>
     </view>
+    
   </view>
-    <view class="product-container" wx:for="{{data}}" wx:for-item="dataItem">
+  <view class="product-container">
+    <view wx:for="{{data}}" wx:for-item="dataItem">
       <template is="product-item-template" data="{{...dataItem}}"></template>
     </view>
+  </view>
+    
   
   <view>
   </view>
