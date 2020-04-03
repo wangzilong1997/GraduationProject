@@ -1,3 +1,18 @@
 <template name="product-food-template">
-  <view>{{name}}</view>
+<view class="flexr ml40">
+  <image src="{{icon}}" class="food-img"></image>
+  <view class="flexc ml30">
+    <view class="food-title">
+      {{name}}
+    </view>
+    <view class="food-desc ">
+      {{description}}
+    </view>
+    <view class="food-price mt20">
+      ￥{{price}}
+    </view>
+    
+  </view>
+</view>
+  
 </template>

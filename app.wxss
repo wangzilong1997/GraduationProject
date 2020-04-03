@@ -1,10 +1,8 @@
 /**app.wxss**/
+/*常用的样式*/
+@import "common.wxss";
 .container {
   font-family: MicroSoft Yahei;
   font-size: 24rpx;
   color: #666;
 } 
-image{
-  
-
-}

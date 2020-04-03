@@ -1,0 +1,80 @@
+.flexr{
+  display: flex;
+  flex-direction: row;
+}
+.flexc{
+  display: flex;
+  flex-direction: column;
+}
+.ml10{
+  margin-left: 10rpx;
+}
+.ml20{
+  margin-left: 20rpx;
+}
+.ml10{
+  margin-left: 10rpx;
+}
+.ml30{
+  margin-left: 30rpx;
+}
+.ml40{
+  margin-left: 40rpx;
+}
+.ml50{
+  margin-left: 50rpx;
+}
+.mr10{
+  margin-right: 10rpx;
+}
+.mr20{
+  margin-right: 20rpx;
+}
+.mr30{
+  margin-right: 10rpx;
+}
+.mr40{
+  margin-right: 30rpx;
+}
+
+.mr50{
+  margin-right: 50rpx;
+}
+.mt10{
+  margin-top: 10rpx;
+}
+.mt20{
+  margin-top: 20rpx;
+}
+
+.mt30{
+  margin-top: 30rpx;
+}
+
+.mt40{
+  margin-top: 40rpx;
+}
+.mt50{
+  margin-top: 50rpx;
+}
+
+.mb10{
+  margin-bottom: 10rpx;
+}
+.mb20{
+  margin-bottom: 20rpx;
+}
+
+.mb30{
+  margin-bottom: 30rpx;
+}
+
+.mb40{
+  margin-bottom: 40rpx;
+}
+.mb50{
+  margin-bottom: 50rpx;
+}
+
+
+

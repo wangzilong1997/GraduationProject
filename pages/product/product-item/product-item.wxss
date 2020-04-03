@@ -1,3 +1,4 @@
+@import "../product-food/product-food.wxss";
 .product-item-template{
   display: flex;
   flex-direction: column;

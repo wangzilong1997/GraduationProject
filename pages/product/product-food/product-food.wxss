@@ -1,0 +1,19 @@
+.food-img{
+  width: 160rpx;
+  height: 160rpx;
+}
+.food-price{
+  font-family: sans-serif;
+  font-size: .9rem;
+  color: red;
+}
+.food-desc{
+  font-family: sans-serif;
+  font-size: .8rem;
+  color: #666;
+  margin-top: 3rpx;
+}
+.food-title{
+  font-weight: bold;
+  font-size: .6;
+}

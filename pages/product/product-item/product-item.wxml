@@ -4,9 +4,6 @@
     <view>
       {{name}}
     </view>
-    <view>
-      {{type}}
-    </view>
     <view wx:for="{{foods}}" wx:for-item="food">
       <template is="product-food-template" data="{{...food}}"></template>
     </view>
