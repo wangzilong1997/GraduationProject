@@ -31,9 +31,21 @@
     
   </view>
   <view class="product-container">
-    <view wx:for="{{data}}" wx:for-item="dataItem">
-      <template is="product-item-template" data="{{...dataItem}}"></template>
+  <view class="product-container-left ml20 flexc" >
+    <view wx:for="{{data}}" wx:for-item="dataItem" wx:key="{{dataItem.type}}" id="{{'categoryLType' + dataItem.type}}" bindtap="{{selectedLeftMenuItem == dataItem.type?'':'selectClassesClick'}}">
+      <view class="{{selectedLeftMenuItem == dataItem.type?'leftTab-selectedItem':'leftTab-items'}}">{{dataItem.name}}</view>
     </view>
+  </view>
+    
+  <view class="product-container-right">
+    <scroll-view scroll-into-view="{{toView}}" scroll-with-animation="true" scroll-y="true" style="height:750rpx;" bindscroll="touchStart">
+      <view wx:for="{{data}}" wx:for-item="dataItem" wx:key="type" id="{{'categoryRType' + dataItem.type}}">
+        <template is="product-item-template" data="{{...dataItem}}"  ></template>
+      </view>
+    </scroll-view>
+    
+  </view>
+    
   </view>
     
   

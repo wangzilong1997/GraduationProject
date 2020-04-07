@@ -1,11 +1,11 @@
 <template name="product-food-template">
-<view class="flexr ml40">
+<view class="flexr ml10" >
   <image src="{{icon}}" class="food-img"></image>
   <view class="flexc ml30">
     <view class="food-title">
       {{name}}
     </view>
-    <view class="food-desc ">
+    <view class="food-desc shengluehao">
       {{description}}
     </view>
     <view class="food-price mt20">

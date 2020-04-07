@@ -6,3 +6,18 @@
   font-size: 24rpx;
   color: #666;
 } 
+
+button::after{
+
+border:none;
+
+}
+input{
+
+outline:none;
+
+border:none;
+
+list-style: none;
+
+}

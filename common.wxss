@@ -1,3 +1,8 @@
+.shengluehao{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .flexr{
   display: flex;
   flex-direction: row;

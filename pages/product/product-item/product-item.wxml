@@ -1,7 +1,7 @@
 <import src="../product-food/product-food.wxml" />
 <template name="product-item-template">
-  <view class="product-item-template">
-    <view>
+  <view class="product-item-template ml30" >
+    <view class="product-type">
       {{name}}
     </view>
     <view wx:for="{{foods}}" wx:for-item="food">

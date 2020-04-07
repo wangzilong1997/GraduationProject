@@ -12,6 +12,7 @@
   font-size: .8rem;
   color: #666;
   margin-top: 3rpx;
+  max-width: 20vh;
 }
 .food-title{
   font-weight: bold;

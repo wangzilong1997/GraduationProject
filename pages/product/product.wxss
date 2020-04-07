@@ -14,10 +14,10 @@
 }
 .product-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #fff;
   margin-top: -3rem;
-  padding-top: 3rem;
+  padding-top: 5rem;
 
 }
 .product-seller{
@@ -86,4 +86,26 @@
   width: 32rpx;
   height: 32rpx;
   margin-left: .4rem;
+}
+.product-container-right{
+  width: 70vh;
+  background-color: #fffcdc;
+  border-radius: 40rpx;
+  
+}
+.product-container-left{
+  width: 20vh;
+}
+.leftTab-selectedItem{
+  font-family: "Microsoft YaHei";
+  background-color: #fffcdc;
+  border-radius: 6rpx;
+  text-align: center;
+  border-left: solid #FAC815 10rpx;
+  font-size: 31rpx;
+  
+}
+.leftTab-items{
+  text-align: center;
+  font-size: 31rpx;
 }
