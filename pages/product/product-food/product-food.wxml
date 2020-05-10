@@ -1,18 +1,22 @@
 <template name="product-food-template">
-<view class="flexr ml10" >
-  <image src="{{icon}}" class="food-img"></image>
-  <view class="flexc ml30">
-    <view class="food-title">
-      {{name}}
+  <view class="flexr ml10">
+    <image src="{{icon}}" class="food-img"></image>
+    <view class="flexc ml30">
+      <view class="food-title">
+        {{name}}
+      </view>
+      <view class="food-desc shengluehao">
+        {{description}}
+      </view>
+      <view class="food-price mt20">
+        ￥{{price}}
+      </view>
     </view>
-    <view class="food-desc shengluehao">
-      {{description}}
-    </view>
-    <view class="food-price mt20">
-      ￥{{price}}
-    </view>
-    
+    <view class="buy-num">
+        <view class="jian-btn" catchtap="jianBtnTap" data-index="{{id}}">-</view>
+        <input type="number" value="{{number == undefind? 0:number}}" disabled/>
+        <view class="jia-btn" catchtap="jiaBtnTap" data-index="{{id}}">+</view>
+      </view>
   </view>
-</view>
-  
+
 </template>

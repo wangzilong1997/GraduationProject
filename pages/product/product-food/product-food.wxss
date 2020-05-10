@@ -13,8 +13,46 @@
   color: #666;
   margin-top: 3rpx;
   max-width: 20vh;
+  min-width: 20vh;
 }
 .food-title{
   font-weight: bold;
   font-size: .6;
+}
+ .buy-num{
+   display: flex;
+   flex-direction: row;
+   width: 80rpx;
+   height: 49rpx;
+   
+   
+ }
+ .buy-num .jia-btn{
+    text-align: center;
+    width: 48rpx;
+    height: 100%;
+    border-right: 1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc;
+    border-top: 1rpx solid #ccc;
+    border-bottom-right-radius: 6rpx;
+    border-top-right-radius: 6rpx;
+}
+ .buy-num input{
+
+    width: 68rpx;
+    height: 48rpx;
+    min-height: 48rpx;
+    text-align: center;
+    font-size: 24rpx;
+    border: 1rpx solid #ccc;
+}
+.buy-num .jian-btn{
+    text-align: center;
+    width: 48rpx;
+    height: 100%;
+    border-left: 1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc;
+    border-top: 1rpx solid #ccc;
+    border-bottom-left-radius: 6rpx;
+    border-top-left-radius: 6rpx;
 }

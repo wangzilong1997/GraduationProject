@@ -8,7 +8,14 @@ Page({
   data: {
     data:{},
     selectedLeftMenuItem:"",
-    toView:""
+    toView:"",
+    goodsList: {
+      saveHidden: true,
+      totalPrice: 0,
+      allSelect: true,
+      noSelect: false,
+      list: []
+    }
   },
 
   /**
@@ -19,6 +26,12 @@ Page({
     util.http(app.globalData.url + "buyer/product/list", this.getProductData);
     
 
+  },
+  onShow:function(){
+    var data = wx.getStorageSync("data");
+    this.setData({
+      data: data
+    })
   },
   getProductData:function(e){
     console.log(e)
@@ -36,28 +49,70 @@ Page({
   },
   touchStart:function(e){
     var that = this;
-    console.log(e,"滚动起来了")
+    
     this.data.data.forEach(item => {
       if (e.detail.scrollTop >= (item.offsetTop - 155) && e.detail.scrollTop <= (item.offsetTop - 155 + item.height)) {
         that.setData({
           selectedLeftMenuItem: item.type
         })
       }
-      console.log(that.data.selectedLeftMenuItem)
+      
     })
   }, 
   selectClassesClick:function(e){
     var that = this;
-    console.log(e)
+    
     let dataset = e.currentTarget;
-    console.log(dataset)
+    
     let id = dataset.id;
     id = id.substring(13,id.length);
-    console.log(id)
+    
     that.setData({
       selectedLeftMenuItem: id,
       toView: 'categoryRType' + id //不能数字开头，所以开头加了productItem
     });
     
+  }, 
+  jiaBtnTap:function(e){
+    console.log("加1");
+    var index = e.currentTarget.dataset.index;
+    console.log(index)
+    var list = this.data.goodsList.list;
+    console.log(list);
+    for (var i = 0; i < this.data.data.length; i++) {
+      for (var j = 0; j < this.data.data[i].foods.length; j++) {
+        if (this.data.data[i].foods[j].id == index) {
+          this.data.data[i].foods[j].number = this.data.data[i].foods[j].number == undefined? 1 : this.data.data[i].foods[j].number + 1;
+        }
+      }
+
+    }
+
+    this.setData({
+      data: this.data.data
+    })
+    wx.setStorageSync("data", this.data.data);
+
+  },
+  jianBtnTap: function (e) {
+    console.log("减1");
+    var index = e.currentTarget.dataset.index;
+    console.log(index)
+    var list = this.data.goodsList.list;
+    console.log(list);
+    for(var i=0;i<this.data.data.length;i++){
+      for (var j = 0; j < this.data.data[i].foods.length; j++) {
+        if (this.data.data[i].foods[j].id == index){
+          this.data.data[i].foods[j].number = this.data.data[i].foods[j].number == undefined || this.data.data[i].foods[j].number == 0 ? 0 : this.data.data[i].foods[j].number -1 ;
+        }
+      }
+      
+    }
+
+    this.setData({
+      data:this.data.data
+    })
+    wx.setStorageSync("data", this.data.data);
   }
+  
 })
