@@ -84,7 +84,7 @@ Page({
 
     }
     this.data.goodsList.list = shopList;
-    
+    this.data.goodsList.totalPrice = this.data.goodsList.totalPrice.toFixed(2);
     this.setData({
       goodsList: this.data.goodsList
     })
@@ -124,7 +124,7 @@ Page({
       tempprice += this.data.goodsList.list[i].price * this.data.goodsList.list[i].number;
 
     }
-    this.data.goodsList.totalPrice = tempprice;
+    this.data.goodsList.totalPrice = tempprice.toFixed(2);
     this.setData({
       goodsList: this.data.goodsList,
       data:this.data.data
@@ -161,12 +161,23 @@ Page({
       tempprice += this.data.goodsList.list[i].price * this.data.goodsList.list[i].number;
       
     }
-    this.data.goodsList.totalPrice = tempprice;
+    this.data.goodsList.totalPrice = tempprice.toFixed(2);
     this.setData({
       goodsList: this.data.goodsList,
       data: this.data.data
     })
     wx.setStorageSync("data", this.data.data);
+  },
+  toPayOrder:function(){
+    console.log("toPayOrder点击");
+    this.navigateToPayOrder();
+    wx.setStorageSync("shopCarInfo", this.data.goodsList);
+  },
+  navigateToPayOrder: function () {
+    wx.hideLoading();
+    wx.navigateTo({
+      url: "/pages/to-pay-order/index"
+    })
   }
 
 
