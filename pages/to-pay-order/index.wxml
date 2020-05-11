@@ -23,7 +23,7 @@
         <view class="row-box">
           <view class="row-label">桌号</view>
          
-          <input name="remark" type="number" class="right-text"  placeholder="请输入您所在的桌号" />
+          <input name="remark" type="number" class="right-text" bindinput="inputedit"  placeholder="请输入您所在的桌号" value="{{desktop}}"/>
           
           
         </view>

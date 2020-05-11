@@ -1,5 +1,6 @@
 /**app.wxss**/
 /*常用的样式*/
+@import 'weui/weui.wxss';
 @import "common.wxss";
 .container {
   font-family: MicroSoft Yahei;

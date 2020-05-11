@@ -28,10 +28,13 @@ Page({
 
   },
   onShow:function(){
+    
+    console.log("product页面执行")
     var data = wx.getStorageSync("data");
     this.setData({
       data: data
     })
+    this.getProductData(this.data);
   },
   getProductData:function(e){
     console.log(e)
